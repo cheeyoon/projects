@@ -116,6 +116,10 @@
   width: 50%;
 }
 
+.text.half.desktop {
+  margin-top: 100px;
+}
+
 .projectinfo {
   width: 70%;
 }
@@ -256,6 +260,13 @@
   .text.img {
     width: 50%;
   }
+  .text.img.mobile {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  .text.mobile {
+    margin-top: 50px;
+  }
   .projectinfo {
     width: 100%;
   }
@@ -338,11 +349,20 @@
     margin-bottom: 100px;
     float: right;
   }
+  .text.img.mobile {
+    width: 50%;
+    margin-top: 0px;
+    margin-bottom: 100px;
+  }
   .text.halfmobile {
     width: 50%;
   }
   .text.halfmobile.right {
     float: right;
+  }
+  .text.mobile {
+    margin-top: 25px;
+    margin-bottom: 100px;
   }
   .column {
     padding-right: 0px;
