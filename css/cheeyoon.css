@@ -135,7 +135,7 @@
 }
 
 .project.less {
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 .thinkerous_logo {
@@ -307,9 +307,6 @@
   }
   .thinkerous_main {
     margin-left: -75px;
-  }
-  .project.less {
-    margin-top: 0px;
   }
   .thinkerous_list {
     display: block;
