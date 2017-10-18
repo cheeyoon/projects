@@ -104,10 +104,6 @@
   width: 31%;
 }
 
-.text.halfmobile.desktop {
-  width: 50%;
-}
-
 .text.copy {
   margin-top: 50px;
 }
@@ -132,6 +128,10 @@
 
 .project {
   margin-top: 100px;
+}
+
+.project.top {
+  margin-top: 150px;
 }
 
 .thinkerous_logo {
@@ -171,10 +171,6 @@
   margin-bottom: 50px;
 }
 
-.instagram {
-  margin-bottom: 50px;
-}
-
 .eclipse_main {
   max-width: 70%;
   margin-top: 100px;
@@ -209,6 +205,41 @@
 .eclipse_setting {
   margin-top: 100px;
   margin-left: 50px;
+}
+
+.igwidget {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 25px;
+  margin-left: -150px;
+}
+
+.aavs {
+  max-width: 150%;
+  margin-bottom: 25px;
+}
+
+.brothecary {
+  max-width: 150%;
+  margin-left: -150px;
+}
+
+.cloud_lab {
+  margin-top: 50px;
+  margin-left: -150px;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .25);
+}
+
+.cloud_bottle {
+  margin-top: -50px;
+  margin-left: 100px;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .25);
+}
+
+.rue_video {
+  width: 100%;
+  margin-bottom: 25px;
+  margin-left: -50px;
 }
 
 @media (max-width: 991px) {
@@ -309,6 +340,19 @@
   .eclipse_setting {
     margin-left: 40px;
   }
+  .igwidget {
+    width: 120%;
+  }
+  .aavs {
+    max-width: 120%;
+  }
+  .brothecary {
+    max-width: 100%;
+    margin-left: 0px;
+  }
+  .cloud_lab {
+    margin-left: -50px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -360,6 +404,9 @@
   .text.halfmobile.right {
     float: right;
   }
+  .text.half.right {
+    float: right;
+  }
   .text.mobile {
     margin-top: 25px;
     margin-bottom: 100px;
@@ -396,9 +443,6 @@
     max-width: 50%;
     margin-top: 50px;
   }
-  .instagram {
-    margin-top: 100px;
-  }
   .eclipse_main {
     display: block;
     margin: 0px auto 50px;
@@ -418,12 +462,16 @@
     margin-top: 50px;
     margin-left: 0px;
   }
+  .igwidget {
+    width: 100%;
+    margin-top: 0px;
+  }
+  .aavs {
+    margin-top: 100px;
+  }
 }
 
 @media (max-width: 479px) {
-  .text.halfmobile.desktop {
-    width: 100%;
-  }
   .spacelms_img {
     margin-left: -20px;
   }
@@ -432,6 +480,18 @@
   }
   .eclipse_timer {
     display: block;
+  }
+  .igwidget {
+    margin-left: 0px;
+  }
+  .brothecary {
+    max-width: 120%;
+  }
+  .cloud_bottle {
+    margin-left: 50px;
+  }
+  .rue_video {
+    margin-left: 0px;
   }
 }
 
