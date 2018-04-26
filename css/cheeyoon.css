@@ -270,8 +270,8 @@
 }
 
 .point_flow {
+  max-width: 120%;
   margin-bottom: 50px;
-  margin-left: 150px;
 }
 
 .point_landing {
@@ -413,6 +413,7 @@
     margin-left: 11px;
   }
   .point_flow {
+    max-width: 100%;
     margin-left: 0px;
   }
   .point_landing {
