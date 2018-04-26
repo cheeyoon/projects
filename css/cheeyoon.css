@@ -120,6 +120,10 @@
   width: 70%;
 }
 
+.column {
+  position: relative;
+}
+
 .thinkerous_main {
   margin-top: 100px;
   margin-bottom: 50px;
@@ -246,6 +250,49 @@
   margin-left: -50px;
 }
 
+.point_main {
+  position: relative;
+  z-index: 1;
+  max-width: 110%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-left: -150px;
+}
+
+.pointvideo {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+  width: 615px;
+  margin-top: 153px;
+  margin-left: -62px;
+}
+
+.point_flow {
+  margin-bottom: 50px;
+  margin-left: 150px;
+}
+
+.point_landing {
+  width: 120%;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+.point_code {
+  max-width: 200%;
+  margin-top: 100px;
+  margin-left: -200px;
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, .25);
+}
+
+.point_color {
+  margin-right: 100px;
+  float: right;
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, .25);
+}
+
 @media (max-width: 991px) {
   .topbar {
     margin-top: 25px;
@@ -356,6 +403,28 @@
   }
   .cloud_lab {
     margin-left: -50px;
+  }
+  .point_main {
+    margin-left: -55px;
+  }
+  .pointvideo {
+    width: 450px;
+    margin-top: 138px;
+    margin-left: 11px;
+  }
+  .point_flow {
+    margin-left: 0px;
+  }
+  .point_landing {
+    width: 100%;
+  }
+  .point_code {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 0px;
+  }
+  .point_color {
+    width: 350px;
   }
 }
 
@@ -473,9 +542,28 @@
   .aavs {
     margin-top: 100px;
   }
+  .pointvideo {
+    width: 465px;
+    margin-top: 140px;
+    margin-left: 3px;
+  }
+  .point_landing {
+    margin-top: 50px;
+    margin-left: -30px;
+  }
+  .point_code {
+    max-width: 50%;
+  }
+  .point_color {
+    margin-right: 0px;
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 479px) {
+  .project.overflow {
+    overflow: auto;
+  }
   .spacelms_img {
     margin-left: -20px;
   }
@@ -496,6 +584,24 @@
   }
   .rue_video {
     margin-left: 0px;
+  }
+  .point_main {
+    margin-left: -35px;
+  }
+  .pointvideo {
+    width: 245px;
+    margin-top: 121px;
+    margin-left: -3px;
+  }
+  .point_flow {
+    width: 175%;
+    max-width: 175%;
+  }
+  .point_landing {
+    margin-left: -20px;
+  }
+  .point_code {
+    max-width: 100%;
   }
 }
 
