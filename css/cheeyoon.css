@@ -543,9 +543,12 @@
   .aavs {
     margin-top: 100px;
   }
+  .point_main {
+    margin-top: 0px;
+  }
   .pointvideo {
     width: 580px;
-    margin-top: 148px;
+    margin-top: 48px;
     margin-left: 18px;
   }
   .point_landing {
@@ -591,7 +594,7 @@
   }
   .pointvideo {
     width: 295px;
-    margin-top: 125px;
+    margin-top: 25px;
     margin-left: 2px;
   }
   .point_flow {
