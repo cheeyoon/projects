@@ -42,6 +42,10 @@
   font-family: 'Font Awesome', sans-serif;
 }
 
+.icon.brand {
+  font-family: 'Font Awesome Brands', sans-serif;
+}
+
 .section {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -611,27 +615,27 @@
 
 @font-face {
   font-family: 'Font Awesome';
-  src: url('../fonts/fa-light-300.woff2') format('woff2'), url('../fonts/fa-light-300.eot') format('embedded-opentype'), url('../fonts/fa-light-300.woff') format('woff'), url('../fonts/fa-light-300.ttf') format('truetype'), url('../fonts/fa-light-300.svg') format('svg');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Font Awesome';
-  src: url('../fonts/fa-regular-400.woff2') format('woff2'), url('../fonts/fa-brands-400.woff2') format('woff2'), url('../fonts/fa-regular-400.eot') format('embedded-opentype'), url('../fonts/fa-brands-400.eot') format('embedded-opentype'), url('../fonts/fa-brands-400.woff') format('woff'), url('../fonts/fa-regular-400.woff') format('woff'), url('../fonts/fa-brands-400.ttf') format('truetype'), url('../fonts/fa-regular-400.ttf') format('truetype'), url('../fonts/fa-brands-400.svg') format('svg'), url('../fonts/fa-regular-400.svg') format('svg');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Font Awesome';
   src: url('../fonts/fa-solid-900.woff2') format('woff2'), url('../fonts/fa-solid-900.eot') format('embedded-opentype'), url('../fonts/fa-solid-900.woff') format('woff'), url('../fonts/fa-solid-900.ttf') format('truetype'), url('../fonts/fa-solid-900.svg') format('svg');
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Akkurat';
-  src: url('../fonts/Akkurat-Italic.otf') format('opentype');
+  font-family: 'Font Awesome';
+  src: url('../fonts/fa-regular-400.woff2') format('woff2'), url('../fonts/fa-regular-400.eot') format('embedded-opentype'), url('../fonts/fa-regular-400.woff') format('woff'), url('../fonts/fa-regular-400.ttf') format('truetype'), url('../fonts/fa-regular-400.svg') format('svg');
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Font Awesome';
+  src: url('../fonts/fa-light-300.woff2') format('woff2'), url('../fonts/fa-light-300.eot') format('embedded-opentype'), url('../fonts/fa-light-300.woff') format('woff'), url('../fonts/fa-light-300.ttf') format('truetype'), url('../fonts/fa-light-300.svg') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Font Awesome Brands';
+  src: url('../fonts/fa-brands-400.woff2') format('woff2'), url('../fonts/fa-brands-400.eot') format('embedded-opentype'), url('../fonts/fa-brands-400.woff') format('woff'), url('../fonts/fa-brands-400.ttf') format('truetype'), url('../fonts/fa-brands-400.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
   font-family: 'Akkurat';
