@@ -27,7 +27,7 @@
 }
 
 .link:hover {
-  border-bottom-color: rgba(0, 47, 167, .5);
+  border-bottom-color: rgba(0, 47, 167, 0.5);
 }
 
 .link.big {
@@ -62,8 +62,8 @@
 .canvas {
   position: relative;
   z-index: -999;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .intro {
@@ -169,14 +169,14 @@
   max-width: 120%;
   margin-top: 100px;
   margin-left: 50px;
-  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, .25);
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.25);
 }
 
 .spacelms_share {
   max-width: 200%;
   margin-top: 100px;
   margin-left: -200px;
-  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, .25);
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.25);
 }
 
 .contact {
@@ -239,13 +239,13 @@
 .cloud_lab {
   margin-top: 50px;
   margin-left: -150px;
-  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .25);
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.25);
 }
 
 .cloud_bottle {
   margin-top: -50px;
   margin-left: 100px;
-  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .25);
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.25);
 }
 
 .rue_video {
@@ -288,13 +288,62 @@
   max-width: 200%;
   margin-top: 100px;
   margin-left: -200px;
-  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, .25);
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.25);
 }
 
 .point_color {
   margin-right: 100px;
   float: right;
-  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, .25);
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.25);
+}
+
+.utility-page-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100%;
+  max-width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.utility-page-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 260px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+
+.utility-page-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }
 
 @media (max-width: 991px) {
