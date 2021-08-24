@@ -368,20 +368,23 @@
   align-items: stretch;
 }
 
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .topbar {
     margin-top: 25px;
     padding-right: 20px;
     padding-left: 20px;
   }
+
   .link.big {
     font-size: 28px;
   }
+
   .section.gray {
     margin-right: 0px;
     margin-bottom: 50px;
     margin-left: 0px;
   }
+
   .intro {
     top: 75%;
     padding-right: 20px;
@@ -390,17 +393,21 @@
     -ms-transform: translate(0px, -25%);
     transform: translate(0px, -25%);
   }
+
   .content {
     padding-right: 20px;
     padding-left: 20px;
   }
+
   .h1 {
     font-size: 28px;
     line-height: 40px;
   }
+
   .h1.heading {
     margin-bottom: -15px;
   }
+
   .icons {
     display: -webkit-box;
     display: -webkit-flex;
@@ -415,122 +422,154 @@
     -ms-flex-align: center;
     align-items: center;
   }
+
   .mobileicon {
     margin-left: 20px;
     color: #000;
     font-size: 20px;
     text-decoration: none;
   }
+
   .mobileicon.brand {
     font-family: 'Font Awesome Brands';
   }
+
   .logo {
     width: 40px;
   }
+
   .text.img {
     width: 50%;
   }
+
   .text.img.mobile {
     width: 100%;
     margin-bottom: 0px;
   }
+
   .text.mobile {
     margin-top: 50px;
   }
+
   .projectinfo {
     width: 100%;
   }
+
   .thinkerous_main {
     margin-left: -75px;
   }
+
   .thinkerous_list {
     display: block;
     margin-right: auto;
     margin-left: auto;
   }
+
   .thinkerous_share {
     width: 350px;
   }
+
   .spacelms_img {
     max-width: 100%;
   }
+
   .spacelms_share {
     position: relative;
     z-index: 1;
     margin-top: 100px;
     margin-left: 0px;
   }
+
   .contact {
     padding-right: 20px;
     padding-left: 20px;
   }
+
   .eclipse_main {
     margin-left: 0px;
   }
+
   .eclipse_timer {
     margin-left: 0px;
   }
+
   .eclipse_map {
     margin-left: -25px;
   }
+
   .eclipse_video {
     margin-left: -75px;
   }
+
   .eclipse_setting {
     margin-left: 40px;
   }
+
   .igwidget {
     width: 120%;
   }
+
   .aavs {
     max-width: 120%;
   }
+
   .brothecary {
     max-width: 100%;
     margin-left: 0px;
   }
+
   .cloud_lab {
     margin-left: -50px;
   }
+
   .point_main {
     margin-left: -55px;
   }
+
   .pointvideo {
     width: 450px;
     margin-top: 138px;
     margin-left: 11px;
   }
+
   .point_flow {
     max-width: 100%;
     margin-left: 0px;
   }
+
   .point_landing {
     width: 100%;
   }
+
   .point_code {
     position: relative;
     margin-top: 50px;
     margin-left: 0px;
   }
+
   .point_color {
     width: 350px;
   }
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .link.big {
     font-size: 20px;
   }
+
   .section.gray {
     margin-bottom: 0px;
   }
+
   .h1 {
     font-size: 20px;
     line-height: 30px;
   }
+
   .h1.heading {
     margin-bottom: -10px;
   }
+
   .icons {
     float: right;
     -webkit-justify-content: space-around;
@@ -541,6 +580,7 @@
     -ms-flex-align: center;
     align-items: center;
   }
+
   .mobileicon {
     margin-left: 20px;
     font-family: 'Font Awesome';
@@ -548,35 +588,44 @@
     font-size: 20px;
     text-decoration: none;
   }
+
   .logo {
     width: 35px;
   }
+
   .text.img {
     margin-bottom: 100px;
     float: right;
   }
+
   .text.img.mobile {
     width: 50%;
     margin-top: 0px;
     margin-bottom: 100px;
   }
+
   .text.halfmobile {
     width: 50%;
   }
+
   .text.halfmobile.right {
     float: right;
   }
+
   .text.half.right {
     float: right;
   }
+
   .text.mobile {
     margin-top: 25px;
     margin-bottom: 100px;
   }
+
   .column {
     padding-right: 0px;
     padding-left: 0px;
   }
+
   .thinkerous_main {
     display: block;
     max-width: 120%;
@@ -584,114 +633,143 @@
     margin-right: auto;
     margin-left: auto;
   }
+
   .thinkerous_list {
     margin-bottom: 50px;
   }
+
   .versionblock {
     width: 100%;
   }
+
   .thinkerous_share {
     display: block;
     margin-right: 0px;
     margin-bottom: 50px;
   }
+
   .spacelms_img {
     display: block;
     max-width: 100%;
     margin-top: 50px;
     margin-left: -30px;
   }
+
   .spacelms_share {
     max-width: 50%;
     margin-top: 50px;
   }
+
   .eclipse_main {
     display: block;
     margin: 0px auto 50px;
   }
+
   .screensblock {
     width: 100%;
   }
+
   .eclipse_map {
     margin-bottom: 50px;
   }
+
   .eclipse_video {
     display: block;
     margin-right: auto;
     margin-left: auto;
   }
+
   .eclipse_setting {
     margin-top: 50px;
     margin-left: 0px;
   }
+
   .igwidget {
     width: 100%;
     margin-top: 0px;
   }
+
   .aavs {
     margin-top: 100px;
   }
+
   .point_main {
     margin-top: 0px;
   }
+
   .pointvideo {
     width: 580px;
     margin-top: 48px;
     margin-left: 18px;
   }
+
   .point_landing {
     margin-top: 50px;
     margin-left: -30px;
   }
+
   .point_code {
     max-width: 50%;
   }
+
   .point_color {
     margin-right: 0px;
     margin-bottom: 50px;
   }
 }
 
-@media (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .project.overflow {
     overflow: auto;
   }
+
   .spacelms_img {
     margin-left: -20px;
   }
+
   .spacelms_share {
     max-width: 100%;
   }
+
   .eclipse_timer {
     display: block;
   }
+
   .igwidget {
     margin-left: 0px;
   }
+
   .brothecary {
     max-width: 120%;
   }
+
   .cloud_bottle {
     margin-left: 50px;
   }
+
   .rue_video {
     margin-left: 0px;
   }
+
   .point_main {
     margin-left: -35px;
   }
+
   .pointvideo {
     width: 295px;
     margin-top: 25px;
     margin-left: 2px;
   }
+
   .point_flow {
     width: 175%;
     max-width: 175%;
   }
+
   .point_landing {
     margin-left: -20px;
   }
+
   .point_code {
     max-width: 100%;
   }
@@ -702,28 +780,33 @@
   src: url('../fonts/Akkurat-Bold-Italic.otf') format('opentype');
   font-weight: 700;
   font-style: italic;
+  font-display: auto;
 }
 @font-face {
   font-family: 'Akkurat';
   src: url('../fonts/Akkurat-Light-Regular.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
+  font-display: auto;
 }
 @font-face {
   font-family: 'Akkurat';
   src: url('../fonts/Akkurat-Light-Italic.otf') format('opentype');
   font-weight: 300;
   font-style: italic;
+  font-display: auto;
 }
 @font-face {
   font-family: 'Akkurat';
   src: url('../fonts/Akkurat-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
+  font-display: auto;
 }
 @font-face {
   font-family: 'Akkurat';
   src: url('../fonts/Akkurat-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
+  font-display: auto;
 }
