@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Tue Aug 24 2021 01:18:11 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Mon May 30 2022 22:47:39 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="59dffe46ad94200001413ce4" data-wf-site="59dffe46ad94200001413ce3">
 <head>
   <meta charset="utf-8">
@@ -23,144 +23,9 @@
   <link href="images/webclip.png" rel="apple-touch-icon">
   <script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-108256497-1', 'auto');ga('send', 'pageview');</script>
   <script defer="" src="https://pro.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-8nTbev/iV1sg3ESYOAkRPRDMDa5s0sknqroAe9z4DiM+WDr1i/VKi5xLWsn87Car" crossorigin="anonymous"></script>
-  <style>
-  canvas {
-  	position: absolute;
-    top: 0;
-</style>
 </head>
 <body class="body">
-  <div class="canvas w-embed w-script">
-    <script src="https://threejs.org/build/three.min.js"></script>
-    <script src="https://threejs.org/examples/js/WebGL.js"></script>
-    <script type="x-shader/x-vertex" id="vertexshader">
-	attribute float scale;
-	void main() {
-		vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
-		gl_PointSize = scale * ( 300.0 / - mvPosition.z );
-		gl_Position = projectionMatrix * mvPosition;
-}
-</script>
-    <script type="x-shader/x-fragment" id="fragmentshader">
-	uniform vec3 color;
-	void main() {
-		if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.475 ) discard;
-		gl_FragColor = vec4( color, 1.0 );
-}
-</script>
-    <script type="module">
-	import * as THREE from 'https://threejs.org/build/three.module.js';
-	var SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
-	var container;
-	var camera, scene, renderer;
-	var particles, count = 0;
-	var mouseX = 0, mouseY = 0;
-	var windowHalfX = window.innerWidth / 2;
-	var windowHalfY = window.innerHeight / 2;
-	init();
-	animate();
-	function init() {
-		container = document.createElement( 'div' );
-		document.body.appendChild( container );
-		camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
-		camera.position.z = 1000;
-		scene = new THREE.Scene();
-		scene.background = new THREE.Color( 0xffffff );
-		//
-		var numParticles = AMOUNTX * AMOUNTY;
-		var positions = new Float32Array( numParticles * 3 );
-		var scales = new Float32Array( numParticles );
-		var i = 0, j = 0;
-		for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
-			for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
-				positions[ i ] = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 ); // x
-				positions[ i + 1 ] = 0; // y
-				positions[ i + 2 ] = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) / 2 ); // z
-				scales[ j ] = 1;
-				i += 3;
-				j ++;
-			}
-		}
-		var geometry = new THREE.BufferGeometry();
-		geometry.addAttribute( 'position', new THREE.BufferAttribute( positions, 3 ) );
-		geometry.addAttribute( 'scale', new THREE.BufferAttribute( scales, 1 ) );
-		var material = new THREE.ShaderMaterial( {
-			uniforms: {
-				color: { value: new THREE.Color( 0x000000 ) },
-			},
-			vertexShader: document.getElementById( 'vertexshader' ).textContent,
-			fragmentShader: document.getElementById( 'fragmentshader' ).textContent
-		} );
-		//
-		particles = new THREE.Points( geometry, material );
-		scene.add( particles );
-		//
-		renderer = new THREE.WebGLRenderer( { antialias: true } );
-		renderer.setPixelRatio( window.devicePixelRatio );
-		renderer.setSize( window.innerWidth, window.innerHeight );
-		container.appendChild( renderer.domElement );
-		document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-		document.addEventListener( 'touchstart', onDocumentTouchStart, false );
-		document.addEventListener( 'touchmove', onDocumentTouchMove, false );
-		//
-		window.addEventListener( 'resize', onWindowResize, false );
-	}
-	function onWindowResize() {
-		windowHalfX = window.innerWidth / 2;
-		windowHalfY = window.innerHeight / 2;
-		camera.aspect = window.innerWidth / window.innerHeight;
-		camera.updateProjectionMatrix();
-		renderer.setSize( window.innerWidth, window.innerHeight );
-	}
-	//
-	function onDocumentMouseMove( event ) {
-		mouseX = event.clientX - windowHalfX;
-		mouseY = event.clientY - windowHalfY;
-	}
-	function onDocumentTouchStart( event ) {
-		if ( event.touches.length === 1 ) {
-			event.preventDefault();
-			mouseX = event.touches[ 0 ].pageX - windowHalfX;
-			mouseY = event.touches[ 0 ].pageY - windowHalfY;
-		}
-	}
-	function onDocumentTouchMove( event ) {
-		if ( event.touches.length === 1 ) {
-			event.preventDefault();
-			mouseX = event.touches[ 0 ].pageX - windowHalfX;
-			mouseY = event.touches[ 0 ].pageY - windowHalfY;
-		}
-	}
-	//
-	function animate() {
-		requestAnimationFrame( animate );
-		render();
-	}
-	function render() {
-		camera.position.x += ( mouseX - camera.position.x ) * .05;
-		camera.position.y += ( - mouseY - camera.position.y ) * .05;
-		camera.lookAt( scene.position );
-		var positions = particles.geometry.attributes.position.array;
-		var scales = particles.geometry.attributes.scale.array;
-		var i = 0, j = 0;
-		for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
-			for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
-				positions[ i + 1 ] = ( Math.sin( ( ix + count ) * 0.3 ) * 50 ) +
-				( Math.sin( ( iy + count ) * 0.5 ) * 50 );
-				scales[ j ] = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 8 +
-				( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 8;
-				i += 3;
-				j ++;
-			}
-		}
-		particles.geometry.attributes.position.needsUpdate = true;
-		particles.geometry.attributes.scale.needsUpdate = true;
-		renderer.render( scene, camera );
-		count += 0.1;
-	}
-</script>
-  </div>
-  <div class="home wf-section">
+  <div id="about" class="section wf-section">
     <div class="topbar w-hidden-main w-container"><img src="images/logo.png" width="35" sizes="(max-width: 767px) 35px, (max-width: 991px) 40px, 100vw" srcset="images/logo-p-500.png 500w, images/logo.png 722w" alt="" class="logo">
       <div class="icons">
         <div class="mobileicon w-embed">
@@ -218,14 +83,8 @@
         </div>
       </div>
     </div>
-    <div class="intro w-container">
-      <h1 class="h1">I&#x27;m Cheeyoon, a Product Designer who hangs out in Los Angeles. <a href="#about" class="link">Learn more</a>
-      </h1>
-    </div>
-  </div>
-  <div id="about" class="section wf-section">
     <div class="content w-container">
-      <h1 class="h1">My background is in <a target="_blank" href="https://sciarc.edu/" class="link big">architecture</a>, but my interests drifted towards technology startups during my academics.<br><br>Recently I cofound <a href="https://kippoapp.com" target="_blank" class="link big">Kippo</a> and in my free time trade <a href="https://bio.link/cheeyoon" target="_blank" class="link big">crypto</a> or try to convince my friends to buy a <a href="https://ts.la/cheeyoon75565" target="_blank" class="link big">Tesla</a>.<br><br>Previously I worked on <a href="https://trefleskin.com/" target="_blank" class="link big">Trèfle</a>, organized an AR/VR workshop with <a href="http://aavs.la/" target="_blank" class="link big">AAVSLA</a>, cocreated a design collaborative <a href="https://cheeyoon.github.io/rue/" target="_blank" class="link big">RUE</a>, and cofounded an enterprise SaaS platform <a target="_blank" href="https://web.archive.org/web/20170515110619/https://www.thinkero.us/" class="link big">Thinkerous</a>.</h1>
+      <h1 class="h1">My background is in <a target="_blank" href="https://sciarc.edu/" class="link big">architecture</a>, but my interests drifted towards technology startups during my academics.<br><br>Recently I cofound <a href="https://kippoapp.com" target="_blank" class="link big">Kippo</a> and in my free time trade <a href="https://ftx.us/#a=chee" target="_blank" class="link big">crypto</a> or pressure peers to get a <a href="https://ts.la/cheeyoon75565" target="_blank" class="link big">Tesla</a>.<br><br>Previously I organized an AR/VR workshop with <a href="http://aavs.la/" target="_blank" class="link big">AAVSLA</a>, cocreated a design collaborative <a href="https://cheeyoon.github.io/rue/" target="_blank" class="link big">RUE</a>, and cofounded an enterprise SaaS platform <a target="_blank" href="https://web.archive.org/web/20170515110619/https://www.thinkero.us/" class="link big">Thinkerous</a>.</h1>
       <div class="divider"></div>
     </div>
   </div>
